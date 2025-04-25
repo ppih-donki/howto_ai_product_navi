@@ -10,12 +10,37 @@
       background-color: #f0f0f0;
       text-align: center;
       padding: 2em;
+      color: #333;
     }
     video {
       width: 100%;
       max-width: 800px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 2em;
+    }
+    .pdf-links {
+      display: inline-block;
+      text-align: left;
+      background: #ffffff;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .pdf-links h2 {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+    .pdf-links a {
+      display: block;
+      margin-bottom: 0.75em;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .pdf-links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -27,6 +52,12 @@
     <source src="howto.mp4" type="video/mp4">
     お使いのブラウザは video タグをサポートしていません。
   </video>
+
+  <div class="pdf-links">
+    <h2>座標データをpdfで見る</h2>
+    <a href="pdfdata/00092_1F_20250424.pdf" target="_blank">銀座本館 1F フロアマップ（2024/04/24）</a>
+    <a href="pdfdata/00092_2F_20250424.pdf" target="_blank">銀座本館　2F フロアマップ（2024/04/24）</a>
+  </div>
 
 </body>
 </html>
