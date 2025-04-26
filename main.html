@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>運用ガイドページ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 1em;
+      text-align: center;
+    }
+    video {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 2em 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    a.pdf-link {
+      display: block;
+      margin: 1em 0;
+      font-size: 1.2em;
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a.pdf-link:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      margin-top: 2em;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+// Cookieがなかったらlogin.htmlに戻す
+if (document.cookie.indexOf('allowed=true') === -1) {
+  window.location.href = "login.html";
+}
+</script>
+
+<!-- user_app.mp4 を埋め込み -->
+<video controls>
+  <source src="movies/user_app.mp4" type="video/mp4">
+  ブラウザが動画をサポートしていません。
+</video>
+
+<!-- 運用アプリの説明書 -->
+<h2>運用アプリの説明書</h2>
+
+<!-- howto_ai_product_navi.pdfへのリンク -->
+<a class="pdf-link" href="mapdata_pdf/howto_ai_product_navi.pdf" target="_blank">
+  ➔ 運用アプリナビ説明書（PDF）
+</a>
+
+<!-- 00092_20250424.pdfへのリンク -->
+<a class="pdf-link" href="mapdata_pdf/00092_20250424.pdf" target="_blank">
+  ➔ マップデータ 00092（PDF）
+</a>
+
+<!-- howto.mp4 を埋め込み -->
+<video controls>
+  <source src="movies/howto.mp4" type="video/mp4">
+  ブラウザが動画をサポートしていません。
+</video>
+
+</body>
+</html>

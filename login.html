@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ログインページ</title>
+  <link rel="stylesheet" href="asetts/login.css"> <!-- 任意でCSSファイル分離も可能 -->
+</head>
+<body>
+
+<h1>パスワードを入力してください</h1>
+
+<div id="authArea">
+  <input type="password" id="passwordInput" placeholder="パスワードを入力">
+  <br>
+  <button onclick="checkPassword()">送信</button>
+  <div id="errorMessage" class="error"></div>
+</div>
+
+<script src="asetts/script_login.js"></script>
+
+</body>
+</html>
