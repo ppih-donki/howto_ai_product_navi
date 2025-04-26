@@ -10,9 +10,9 @@ function sendEmployeeCode() {
   // 空欄だったら送らない
   if (!employeeCode) return;
 
-  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSepfdsb9S7xAfQaHWI1jjJ-X5gcEEQNeYmGEOkmBzPMq2wuKg/formResponse"; // ←あなたのformResponse URL
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSepfdsb9S7xAfQaHWI1jjJ-X5gcEEQNeYmGEOkmBzPMq2wuKg/formResponse"; 
   const formData = new FormData();
-  formData.append("entry.XXXXXXXXXX", employeeCode); // ←あとでちゃんと「entry番号」に置き換える！
+  formData.append("entry.1258640469", employeeCode); // ←ここにあなたの正しいentry番号！
 
   fetch(formUrl, {
     method: "POST",
@@ -27,7 +27,7 @@ function sendEmployeeCode() {
 
 // ▼【パスワードチェック】の中で、最初に呼び出す
 function checkPassword() {
-  sendEmployeeCode(); // ←ここで先に従業員コード送信！
+  sendEmployeeCode(); // ←ここで従業員コード送信！
 
   const input = document.getElementById('passwordInput').value;
 
