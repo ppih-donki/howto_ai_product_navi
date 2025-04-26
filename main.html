@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow"> <!-- 検索エンジン除外 -->
   <title>運用ガイドページ</title>
   <style>
     body {
@@ -39,7 +40,7 @@
 <body>
 
 <script>
-// Cookieがなかったらlogin.htmlに戻す
+// Cookieがなかったらlogin.htmlに戻す（直リンク防止）
 if (document.cookie.indexOf('allowed=true') === -1) {
   window.location.href = "login.html";
 }
