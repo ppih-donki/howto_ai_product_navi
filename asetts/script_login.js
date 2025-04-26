@@ -3,18 +3,40 @@ const validPasswords = ["00092", "00442", "00373", "00555", "00278"]; // 正し�
 const cookieName = "allowed=true";  // Cookie名
 // --------------------
 
-// パスワード確認処理
+// ▼【追加する関数】従業員コードをGoogleフォームに送る
+function sendEmployeeCode() {
+  const employeeCode = document.getElementById('employeeCode').value;
+
+  // 空欄だったら送らない
+  if (!employeeCode) return;
+
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSepfdsb9S7xAfQaHWI1jjJ-X5gcEEQNeYmGEOkmBzPMq2wuKg/formResponse"; // ←あなたのformResponse URL
+  const formData = new FormData();
+  formData.append("entry.XXXXXXXXXX", employeeCode); // ←あとでちゃんと「entry番号」に置き換える！
+
+  fetch(formUrl, {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  }).then(response => {
+    console.log("従業員コード送信完了");
+  }).catch(error => {
+    console.error("送信エラー:", error);
+  });
+}
+
+// ▼【パスワードチェック】の中で、最初に呼び出す
 function checkPassword() {
+  sendEmployeeCode(); // ←ここで先に従業員コード送信！
+
   const input = document.getElementById('passwordInput').value;
 
   if (validPasswords.includes(input)) {
-    // 正しい → Cookie発行して main.html へ移動
     const expireDate = new Date();
     expireDate.setTime(expireDate.getTime() + (24 * 60 * 60 * 1000)); // 24時間後
     document.cookie = cookieName + "; path=/howto_ai_product_navi/; expires=" + expireDate.toUTCString();
     window.location.href = "main.html";
   } else {
-    // 間違い → エラー表示
     document.getElementById('errorMessage').innerText = "パスワードが違います。";
   }
 }
