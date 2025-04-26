@@ -1,5 +1,5 @@
 // --- 設定ここだけ ---
-const validPasswords = ["pass123", "secret456", "donki789"]; // 正しいパスワードリスト
+const validPasswords = ["00092", "secret442", "00373", "00555", "00278"]; // 正しいパスワードリスト
 const cookieName = "allowed=true";  // Cookie名
 // --------------------
 
