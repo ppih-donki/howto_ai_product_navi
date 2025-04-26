@@ -40,8 +40,7 @@
 <body>
 
 <script>
-// Cookieがなかったらlogin.htmlに戻す（直リンク防止）
-if (document.cookie.indexOf('allowed=true') === -1) {
+if (!document.cookie.split('; ').includes('allowed=true')) {
   window.location.href = "login.html";
 }
 </script>
