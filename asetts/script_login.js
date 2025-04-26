@@ -9,7 +9,9 @@ function checkPassword() {
 
   if (validPasswords.includes(input)) {
     // 正しい → Cookie発行して main.html へ移動
-    document.cookie = cookieName + "; path=/howto_ai_product_navi/";  // ここパス指定！
+    const expireDate = new Date();
+    expireDate.setTime(expireDate.getTime() + (24 * 60 * 60 * 1000)); // 24時間後
+    document.cookie = cookieName + "; path=/howto_ai_product_navi/; expires=" + expireDate.toUTCString();
     window.location.href = "main.html";
   } else {
     // 間違い → エラー表示
