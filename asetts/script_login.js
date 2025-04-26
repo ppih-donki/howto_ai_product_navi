@@ -7,12 +7,11 @@ const cookieName = "allowed=true";  // Cookie名
 function sendEmployeeCode() {
   const employeeCode = document.getElementById('employeeCode').value;
 
-  // 空欄だったら送らない
-  if (!employeeCode) return;
+  if (!employeeCode) return; // 空欄なら送らない
 
   const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSepfdsb9S7xAfQaHWI1jjJ-X5gcEEQNeYmGEOkmBzPMq2wuKg/formResponse"; 
   const formData = new FormData();
-  formData.append("entry.1258640469", employeeCode); // ←ここにあなたの正しいentry番号！
+  formData.append("entry.2095396589", employeeCode);
 
   fetch(formUrl, {
     method: "POST",
