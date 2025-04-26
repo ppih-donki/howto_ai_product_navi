@@ -2,13 +2,39 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ログインページ</title>
-  <link rel="stylesheet" href="asetts/login.css"> <!-- 任意でCSSファイル分離も可能 -->
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      padding: 2em;
+    }
+    input[type="text"], input[type="password"], button {
+      padding: 0.5em;
+      font-size: 1em;
+      margin: 0.5em;
+      width: 250px;
+      max-width: 90%;
+    }
+    .error {
+      color: red;
+      margin-top: 1em;
+    }
+  </style>
 </head>
 <body>
 
-<h1>パスワードを入力してください</h1>
+<h1>ログイン認証</h1>
 
+<!-- 7ケタの従業員コード 入力欄（ダミー） -->
+<div>
+  <label for="employeeCode">7ケタの従業員コード</label><br>
+  <input type="text" id="employeeCode" placeholder="例: 1234567">
+</div>
+
+<!-- パスワード入力欄 -->
 <div id="authArea">
   <input type="password" id="passwordInput" placeholder="パスワードを入力">
   <br>
