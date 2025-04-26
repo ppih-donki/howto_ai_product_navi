@@ -9,7 +9,7 @@ function checkPassword() {
 
   if (validPasswords.includes(input)) {
     // 正しい → Cookie発行して main.html へ移動
-    document.cookie = cookieName + "; path=/";
+    document.cookie = cookieName + "; path=/howto_ai_product_navi/";  // ここパス指定！
     window.location.href = "main.html";
   } else {
     // 間違い → エラー表示
