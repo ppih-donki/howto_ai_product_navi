@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow"> <!-- 検索エンジン除外 -->
+  <meta name="robots" content="noindex, nofollow">
   <title>運用ガイドページ</title>
   <style>
     body {
@@ -11,7 +11,7 @@
       background-color: #f9f9f9;
       color: #333;
       padding: 1em;
-      text-align: center;
+      text-align: left; /* ← 左寄せに変更 */
     }
     video {
       width: 100%;
@@ -21,24 +21,25 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
-    a.pdf-link {
+    a {
       display: block;
       margin: 0.5em 0;
       font-size: 1.1em;
       color: #0066cc;
       text-decoration: none;
     }
-    a.pdf-link:hover {
+    a:hover {
       text-decoration: underline;
     }
-    h2 {
-      margin-top: 2em;
-      font-size: 1.5em;
-    }
-    h3 {
-      margin: 2em 0 0.5em 0; /* ← 下のマージンだけ狭くする */
+    strong {
+      font-weight: bold;
       font-size: 1.3em;
-      color: #555;
+    }
+    span.gray {
+      display: block;
+      margin: 0.5em 0;
+      font-size: 1.1em;
+      color: gray;
     }
   </style>
 </head>
@@ -50,69 +51,61 @@ if (!document.cookie.split('; ').includes('allowed=true')) {
 }
 </script>
 
-<!-- AI商品ナビの概要 -->
-<h2>AI商品ナビ<br>【顧客向けアプリ】</h2>
-
-<h3>↓ 顧客向けアプリの動画 ↓</h3>
+<!-- 【AI商品ナビ紹介動画】 -->
+<p><strong>【AI商品ナビ紹介動画】</strong></p>
 <video controls>
-  <source src="movies/user_app.mp4" type="video/mp4">
+  <source src="https://ppih-donki.github.io/howto_ai_product_navi/movies/user_app.mp4" type="video/mp4">
   ブラウザが動画をサポートしていません。
 </video>
 
-<a class="pdf-link" href="https://ai-item-location-search-web-1066573637137.us-central1.run.app/?store_code=00092" target="_blank">
-  ☞ 銀座本館用
-</a>
-<a class="pdf-link" href="https://ai-item-location-search-web-1066573637137.us-central1.run.app/?store_code=00442" target="_blank">
-  ☞ 渋谷本店用
-</a>
-<span class="pdf-link" style="color:gray;">
-  ・御堂筋店　※準備中<br>
-</span>
-<span class="pdf-link" style="color:gray;">
-  ・狸小路店　※準備中<br>
-</span>
-<span class="pdf-link" style="color:gray;">
-  ・中洲店　　※準備中<br>
-</span>
-
-<!-- AI商品ナビの運用 -->
-<h2>【検索商品登録方法】</h2>
-
-<a class="pdf-link" href="pdfdata/howto_ai_product_navi.pdf" target="_blank">
-  ・説明書（4.25更新）
-</a>
-<a class="pdf-link" href="https://teams.microsoft.com/l/message/19:ddfd919894eb4ecbba417bc0156f2ade@thread.v2/1745494357169?context=%7B%22contextType%22%3A%22chat%22%7D" target="_blank">
-  ・検索対象商品リスト<br>※要Teamsログイン
-</a>
-<a class="pdf-link" href="https://teams.microsoft.com/l/message/19:ddfd919894eb4ecbba417bc0156f2ade@thread.v2/1745494357169?context=%7B%22contextType%22%3A%22chat%22%7D" target="_blank">
-  ・銀座本館_棚ID-QRコード<br>※要Teamsログイン
-</a>
-<a class="pdf-link" href="https://nextjs-test-web-app-1066573637137.us-central1.run.app/login" target="_blank">
-  ☞ 棚画像撮影アプリ（全店共通）
+<!-- 【資料】 -->
+<p><strong>【資料】</strong></p>
+<a href="https://ppih-donki.github.io/howto_ai_product_navi/pdfdata/howto_ai_product_navi.pdf" target="_blank">
+・サービス説明（4.28更新）
 </a>
 
-<!-- マップと座標データ -->
-<h2>【マップと座標データ】</h2>
-
-<a class="pdf-link" href="mapdata_pdf/00092_20250428.pdf" target="_blank">
-  ・銀座本館（4.25更新）
+<!-- 【顧客向けアプリ】 -->
+<p><strong>【顧客向けアプリ】</strong></p>
+<a href="https://ai-item-location-search-web-1066573637137.us-central1.run.app/?store_code=00092" target="_blank">
+☞銀座本館用
 </a>
-<span class="pdf-link" style="color:gray;">
-  ・渋谷本店　※更新中<br>
-</span>
-<span class="pdf-link" style="color:gray;">
-  ・御堂筋店　※制作中<br>
-</span>
-<span class="pdf-link" style="color:gray;">
-  ・狸小路店　※準備中<br>
-</span>
-<span class="pdf-link" style="color:gray;">
-  ・中洲店　　※準備中<br>
-</span>
+<a href="https://ai-item-location-search-web-1066573637137.us-central1.run.app/?store_code=00442" target="_blank">
+☞渋谷本店用
+</a>
 
-<h3>↓ 棚画像の撮影方法の動画 ↓</h3>
+<!-- 【棚画像撮影アプリ】 -->
+<p><strong>【棚画像撮影アプリ】</strong></p>
+<a href="https://nextjs-test-web-app-1066573637137.us-central1.run.app/login" target="_blank">
+☞全店共通
+</a>
+
+<!-- 【マップと座標データ】 -->
+<p><strong>【マップと座標データ】</strong></p>
+<a href="https://ppih-donki.github.io/howto_ai_product_navi/mapdata_pdf/00092_20250428.pdf" target="_blank">
+・銀座本館（4.28更新）
+</a>
+<span class="gray">・渋谷本店　※更新中</span>
+<span class="gray">・御堂筋店　※制作中</span>
+<span class="gray">・狸小路店　※準備中</span>
+<span class="gray">・中洲店　　※準備中</span>
+
+<!-- 【データ】 -->
+<p><strong>【データ】※要Teamsログイン</strong></p>
+<a href="https://teams.microsoft.com/l/message/19:ddfd919894eb4ecbba417bc0156f2ade@thread.v2/1745494357169?context=%7B%22contextType%22%3A%22chat%22%7D" target="_blank">
+・検索対象商品リスト
+</a>
+<a href="https://teams.microsoft.com/l/message/19:ddfd919894eb4ecbba417bc0156f2ade@thread.v2/1745494357169?context=%7B%22contextType%22%3A%22chat%22%7D" target="_blank">
+・棚ID-QRコード<br>∟銀座本館
+</a>
+<span class="gray">∟渋谷本店　※UP待ち</span>
+<span class="gray">∟御堂筋店　※制作中</span>
+<span class="gray">∟狸小路店　※準備中</span>
+<span class="gray">∟中洲店　　※準備中</span>
+
+<!-- 【棚画像の撮影方法の動画】 -->
+<p><strong>【棚画像の撮影方法の動画】</strong></p>
 <video controls>
-  <source src="movies/howto.mp4" type="video/mp4">
+  <source src="https://ppih-donki.github.io/howto_ai_product_navi/movies/howto.mp4" type="video/mp4">
   ブラウザが動画をサポートしていません。
 </video>
 
